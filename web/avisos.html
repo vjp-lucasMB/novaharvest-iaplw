@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NovaHarvest - Avísame</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+<header>
+    <img src="/img/logo.png" alt="Logotipo de NovaHarvest" width="180">
+    <h1>NovaHarvest</h1>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/excedentes.php">Excedentes</a>
+        <a href="/avisos.html">Avísame</a>
+        <a href="/temporada.md">Temporada</a>
+        <a href="/estado.php">Estado</a>
+    </nav>
+</header>
+<main>
+    <h1>Avísame</h1>
+    <p>Indica qué producto te interesa y guardaremos tu solicitud.</p>
+    <form method="POST" action="/avisos.php">
+        <p>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required>
+        </p>
+        <p>
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required>
+        </p>
+        <p>
+            <label for="producto">Producto que te interesa</label>
+            <input id="producto" name="producto" type="text" required>
+        </p>
+        <button type="submit">Avísame</button>
+    </form>
+</main>
+<footer>NovaHarvest · IES Valle del Jerte · Curso 2026-2027</footer>
+</body>
+</html>
