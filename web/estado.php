@@ -17,18 +17,18 @@ $version = $conexion->query("SELECT VERSION()")->fetchColumn();
 <head>
     <meta charset="UTF-8">
     <title>NovaHarvest - Estado del servidor</title>
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/web/css/estilos.css">
 </head>
 <body>
 <header>
-    <img src="/img/logo.png" alt="Logotipo de NovaHarvest" width="180">
+    <img src="/web/img/logo.png" alt="Logotipo de NovaHarvest" width="180">
     <h1>NovaHarvest</h1>
     <nav>
-        <a href="/">Inicio</a>
-        <a href="/excedentes.php">Excedentes</a>
-        <a href="/avisos.html">Avísame</a>
-        <a href="/temporada.md">Temporada</a>
-        <a href="/estado.php">Estado</a>
+        <a href="/web/index.html">Inicio</a>
+        <a href="/web/excedentes.php">Excedentes</a>
+        <a href="/web/avisos.html">Avísame</a>
+        <a href="/web/temporada.md">Temporada</a>
+        <a href="/web/estado.php">Estado</a>
     </nav>
 </header>
 <main>
