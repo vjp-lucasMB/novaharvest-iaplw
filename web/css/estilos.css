@@ -190,3 +190,5 @@ footer {
     nav a { text-align: center; }
     main {
         width: calc(100% - 22px);
+    }
+  }
