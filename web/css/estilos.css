@@ -1,196 +1,192 @@
-/* ==========================================================================
-   Estilos Globales y Estructura Base
-   ========================================================================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* NovaHarvest - paleta de verdes y marrones */
+:root {
+    --verde-oscuro: #285943;
+    --verde: #4f7d52;
+    --verde-claro: #e8f0e3;
+    --marron: #79543a;
+    --marron-oscuro: #4b3528;
+    --crema: #f7f3e9;
+    --blanco: #ffffff;
+    --texto: #302c25;
+    --borde: #d8cbb8;
+    --sombra: 0 4px 14px rgba(55, 45, 30, 0.10);
 }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333333;
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    margin: 0;
+    background: var(--crema);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* ==========================================================================
-   Cabecera (Header) y Navegación
-   ========================================================================== */
+/* Cabecera y menú */
 header {
-  background-color: #2c5e3b; /* Verde agrícola */
-  color: #ffffff;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 4px solid #8b0000; /* Detalle color cereza */
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 22px 5%;
+    text-align: center;
+    border-bottom: 6px solid var(--marron);
 }
 
 header img {
-  height: 50px;
-  width: auto;
-  vertical-align: middle;
-  margin-right: 1rem;
+    display: block;
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 8px;
 }
 
-header span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  flex-grow: 1;
+header h1 {
+    margin: 5px 0 16px;
+    color: var(--blanco);
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+    display: inline-block;
+    padding: 9px 16px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-nav a:hover {
-  background-color: #1e4028;
+nav a:hover, nav a:focus {
+    background: var(--crema);
+    color: var(--verde-oscuro);
 }
 
-/* ==========================================================================
-   Contenido Principal (Main) y Contenedores (DIVs)
-   ========================================================================== */
+/* Zona de contenido */
 main {
-  flex: 1;
-  max-width: 1000px;
-  width: 100%;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+    width: min(100% - 36px, 1050px);
+    min-height: 55vh;
+    margin: 35px auto;
+    padding: 28px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
 }
 
-h1 {
-  color: #2c5e3b;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.5rem;
+h1, h2, h3 {
+    color: var(--verde-oscuro);
+    line-height: 1.25;
 }
 
-p {
-  margin-bottom: 1.2rem;
-  font-size: 1.1rem;
-  text-align: justify;
+main h1 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--verde-claro);
 }
 
-/* Contenedores base para agrupar el contenido de las páginas */
-.presentacion,
-.tabla-contenedor,
-.formulario-contenedor {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
+p { margin: 0 0 16px; }
+
+main a {
+    color: var(--verde-oscuro);
+    font-weight: bold;
 }
 
-/* Ajuste específico para centrar el bloque del formulario si es necesario */
-.formulario-contenedor {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+main a:hover { color: var(--marron); }
 
-/* ==========================================================================
-   Tablas (Para excedentes.php)
-   ========================================================================== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  background-color: #ffffff;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-th, td {
-  padding: 0.75rem 1rem;
-  text-align: left;
-}
-
-th {
-  background-color: #2c5e3b;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f7f4;
-}
-
-tr:hover {
-  background-color: #e6eee9;
-}
-
-/* ==========================================================================
-   Formularios (Para avisos.html)
-   ========================================================================== */
+/* Formularios */
 form {
-  width: 100%;
+    max-width: 650px;
+    margin-top: 24px;
 }
 
-form div {
-  margin-bottom: 1.2rem;
-}
+form p { margin-bottom: 18px; }
 
 label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: bold;
-  color: #444444;
+    display: block;
+    margin-bottom: 6px;
+    color: var(--marron-oscuro);
+    font-weight: bold;
 }
 
-input[type="text"], input[type="email"] {
-  width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  font-size: 1rem;
+input, textarea, select {
+    width: 100%;
+    padding: 11px 12px;
+    color: var(--texto);
+    background: #fffefa;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font: inherit;
 }
 
-input[type="text"]:focus, input[type="email"]:focus {
-  outline: none;
-  border-color: #2c5e3b;
-  box-shadow: 0 0 4px rgba(44, 94, 59, 0.3);
+input:focus, textarea:focus, select:focus {
+    outline: 3px solid rgba(79, 125, 82, 0.22);
+    border-color: var(--verde);
 }
 
 button {
-  background-color: #8b0000; /* Botón color cereza */
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    padding: 11px 22px;
+    color: var(--blanco);
+    background: var(--verde);
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-button:hover {
-  background-color: #660000;
+button:hover, button:focus { background: var(--marron); }
+
+/* Tabla de excedentes */
+table {
+    width: 100%;
+    margin: 22px 0;
+    border-collapse: collapse;
+    border: 1px solid var(--borde);
 }
 
-/* ==========================================================================
-   Pie de Página (Footer)
-   ========================================================================== */
+thead {
+    color: var(--blanco);
+    background: var(--verde-oscuro);
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+tbody tr:nth-child(even) { background: var(--verde-claro); }
+tbody tr:hover { background: #f0e7d8; }
+
+/* Pie de página */
 footer {
-  background-color: #333333;
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: auto;
+    margin-top: 40px;
+    padding: 20px;
+    color: var(--blanco);
+    background: var(--marron-oscuro);
+    text-align: center;
+    border-top: 5px solid var(--verde);
 }
+
+/* Diseño adaptable a móviles */
+@media (max-width: 650px) {
+    header { padding: 18px 4%; }
+    header h1 { font-size: 1.6rem; }
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    nav a { text-align: center; }
+    main {
+        width: calc(100% - 22px);
