@@ -25,24 +25,24 @@ $consulta->execute([
 <head>
     <meta charset="UTF-8">
     <title>NovaHarvest - Aviso registrado</title>
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 <header>
-    <img src="/img/logo.png" alt="Logotipo de NovaHarvest" width="180">
+    <img src="img/logo.png" alt="Logotipo de NovaHarvest" width="180">
     <h1>NovaHarvest</h1>
     <nav>
-        <a href="/">Inicio</a>
-        <a href="/excedentes.php">Excedentes</a>
-        <a href="/avisos.html">Avísame</a>
-        <a href="/temporada.md">Temporada</a>
-        <a href="/estado.php">Estado</a>
+        <a href="index.html">Inicio</a>
+        <a href="excedentes.php">Excedentes</a>
+        <a href="avisos.html">Avísame</a>
+        <a href="temporada.md">Temporada</a>
+        <a href="estado.php">Estado</a>
     </nav>
 </header>
 <main>
     <h1>Aviso registrado</h1>
     <p>Gracias. Te avisaremos cuando haya excedentes del producto que buscas.</p>
-    <p><a href="/excedentes.php">Consultar excedentes disponibles</a></p>
+    <p><a href="excedentes.php">Consultar excedentes disponibles</a></p>
 </main>
 <footer>NovaHarvest · IES Valle del Jerte · Curso 2026-2027</footer>
 </body>
