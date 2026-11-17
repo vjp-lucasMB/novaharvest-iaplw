@@ -35,6 +35,7 @@ $version = $conexion->query("SELECT VERSION()")->fetchColumn();
     <h1>Estado del servidor</h1>
     <p>Fecha y hora del servidor: <?= $fecha ?></p>
     <p>Contenedor PHP: <?= $contenedor ?></p>
+    Cooperativa: Agrupación Cooperativa Valle del Jerte
     <p>Base de datos: MariaDB <?= $version ?></p>
     <p>Página generada por PHP-FPM</p>
 </main>
